@@ -6,11 +6,11 @@
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Weather-->
         <scene sceneID="ke0-1A-jHd">
             <objects>
                 <tableViewController id="pw4-NW-Jzu" customClass="TableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" id="dCE-P8-AVG">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" id="dCE-P8-AVG">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -405,7 +405,7 @@
                             <outlet property="delegate" destination="pw4-NW-Jzu" id="AkR-bJ-Xyd"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="xpl-hd-nnb"/>
+                    <navigationItem key="navigationItem" title="Weather" id="xpl-hd-nnb"/>
                     <connections>
                         <outlet property="cityName" destination="buZ-H9-c8I" id="05P-TQ-cFm"/>
                         <outlet property="cloudsLabel" destination="F89-jE-Er4" id="xJf-Qy-mDn"/>

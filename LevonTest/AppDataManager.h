@@ -13,5 +13,4 @@
 @interface AppDataManager : NSObject
 + (instancetype)defaultManager;
 -(void) updateCurrentDetailByName:(NSString *) cityName  completion:(void (^)(CityInfo* info, NSError* error))completion;
--(void) updateWeakBriefInfo:(NSString *) cityName  completion:(void (^)(CityInfo* info, NSError* error))completion;
 @end

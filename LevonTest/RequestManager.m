@@ -56,16 +56,12 @@ static  NSString* imageUrl =@"/img/w";
 -(void) getWeatherWithSubUrl:(NSString*)subUrl parameters:(NSDictionary*) parameters   {
     
     [self GET:subUrl parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
-//        if ([self.delegate respondsToSelector:@selector(requestManager: didUpdateWithData:)]) {
-//            [self.delegate  requestManager:self didUpdateWithData:responseObject];
-//        }
+
         NSLog(@"ok");
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         NSLog(@"%@",error.localizedDescription);
-//        if ([self.delegate respondsToSelector:@selector(requestManager: didFailWithError:)]) {
-//            [self.delegate  requestManager:self didFailWithError:error];
-//        }
+
     }];
 }
 
@@ -110,7 +106,6 @@ static  NSString* imageUrl =@"/img/w";
 
 -(void) getForecastWeatherByName:(NSString *)cityName days:(NSUInteger)days completion:(void (^)(NSDictionary *, NSError *))completion {
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
-    ///api.openweathermap.org/data/2.5/forecast/daily?q=London&mode=xml&units=metric&cnt=7
     parameters[@"q"] = cityName;
     parameters[@"cnt"] = [NSString stringWithFormat:@"%lu", days];
     if (isMetric) {
@@ -122,13 +117,13 @@ static  NSString* imageUrl =@"/img/w";
 
 }
 
+///@brief function not used  yet
 
 -(void) getImageWithId:(NSString*) imgId {
     
-    NSURLRequest* request = [self.requestSerializer requestWithMethod:@"GET" URLString:@"http://openweathermap.org/img/w/10d.png" parameters:nil error:nil];
-    //  [self setResponseSerializer:[AFImageResponseSerializer serializer]];
+    NSString* urlString  = [NSString stringWithFormat:@"%@%@.png",@"http://openweathermap.org/img/w/",imgId];
+    NSURLRequest* request = [self.requestSerializer requestWithMethod:@"GET" URLString:urlString parameters:nil error:nil];
     NSURLSessionDataTask* dataTask = [self dataTaskWithRequest:request completionHandler:^(NSURLResponse * _Nonnull response, id  _Nonnull responseObject, NSError * _Nonnull error) {
-        UIImage* image = responseObject;
         
     }];
     [dataTask resume];

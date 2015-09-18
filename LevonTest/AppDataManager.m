@@ -42,10 +42,7 @@
         NSDictionary* weatherDict = array[0];
 
         info.descript =weatherDict[@"description"];
-//        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-//        [formatter setDateFormat:@"hh:mm a"];
-//
-//        NSDate* date = [NSDate dateWithTimeIntervalSince1970:[sysDict[@"sunset"] integerValue]];
+
         NSDictionary* sysDict = dict[@"sys"];
         info.sunset = [NSDate dateWithTimeIntervalSince1970:[sysDict[@"sunset"] integerValue]];
         info.sunrise = [NSDate dateWithTimeIntervalSince1970:[sysDict[@"sunrise"] integerValue]];

@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LevonTest/AppDataManager.m"
-            timestampString = "464277551.312054"
+            timestampString = "464280300.242176"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "-updateCurrentDetailByName:completion:"
             landmarkType = "5">
          </BreakpointContent>
